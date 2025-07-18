@@ -1,0 +1,17 @@
+name: Print Hello File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Show contents of hello.txt
+        run: cat hello.txt
